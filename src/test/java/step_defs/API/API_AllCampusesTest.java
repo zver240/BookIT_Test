@@ -27,17 +27,6 @@ public class API_AllCampusesTest extends TestBase {
     }
 
 
-
-    @Then("status is {int}")
-    public void statusIs(int statusCode) {
-        response.then().statusCode(statusCode);
-    }
-
-    @And("contentType is {string}")
-    public void contenttypeIs(String contentType) {
-        response.then().contentType(contentType);
-    }
-
     @And("id is {int}")
     public void idIs(int id) {
         UserActionsAndNavigationUtilities.assertEquals(id, response.path("id"));
