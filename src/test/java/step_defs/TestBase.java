@@ -1,8 +1,6 @@
 package step_defs;
 
 import io.restassured.response.Response;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import pages.*;
 
 public class TestBase {
@@ -25,9 +23,13 @@ public class TestBase {
 
     protected  SchedulePage schedulePage = new SchedulePage();
 
-    protected Response response;
+    protected static Response response;
 
-    protected String accessToken;
+    protected static String accessToken;
+
+
+
+
 
 
 

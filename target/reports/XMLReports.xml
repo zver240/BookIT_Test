@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="5.741" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="API login verify" name="verify login with valid credentials" time="5.5">
+<testsuite name="Cucumber" time="9.249" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="API login verify" name="verify login with valid credentials" time="6.462">
 <system-out><![CDATA[
 Given user logged in to Bookit API as a teacher.............................passed
 When user sends GET request to "/api/users/me"..............................passed
 Then status code should be 200..............................................passed
 And content type is "application/json"......................................passed
 And role is "teacher".......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Get all campuses" name="list all available campuses" time="2.494">
+<system-out><![CDATA[
+Given user logged in to Bookit API as a teacher.............................passed
+When user sends GET request to "/api/clusters"..............................passed
+Then status code should be 200..............................................passed
+And content type is "application/json"......................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
