@@ -1,5 +1,6 @@
 package step_defs;
 
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import pages.*;
 
@@ -27,12 +28,7 @@ public class TestBase {
 
     protected static String accessToken;
 
-
-
-
-
-
-
+    protected static JsonPath jsonPath;
 
 
 
