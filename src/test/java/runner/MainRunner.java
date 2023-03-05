@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         dryRun = false,
         monochrome = false,
         publish = false,
-        tags = "@API"
+        tags = "@graduates"
 
 )
 
