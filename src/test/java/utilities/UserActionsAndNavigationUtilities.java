@@ -1,7 +1,10 @@
 package utilities;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class UserActionsAndNavigationUtilities {
     /**
@@ -57,6 +60,14 @@ public class UserActionsAndNavigationUtilities {
 
         element.click();
 
+    }
+
+    /**
+     * Get List of WebElements
+     */
+    public static List<WebElement> getListOFWebElements (By by){
+        List<WebElement> list = DriverUtility.gD().findElements(by);
+        return list;
     }
 
 

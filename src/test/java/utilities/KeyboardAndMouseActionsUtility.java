@@ -55,5 +55,12 @@ public class KeyboardAndMouseActionsUtility {
         actions.sendKeys(value).perform();
     }
 
+    /**
+     * Double click
+     */
+    public static void doubleClick(WebElement element){
+        actions.doubleClick(element).perform();
+    }
+
 
 }

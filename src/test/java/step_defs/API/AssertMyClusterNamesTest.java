@@ -1,13 +1,10 @@
 package step_defs.API;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
 import pojo.TeacherPojoTest;
 import step_defs.TestBase;
 import utilities.UserActionsAndNavigationUtilities;
-
 import java.util.List;
-import java.util.Map;
 
 public class AssertMyClusterNamesTest extends TestBase {
 

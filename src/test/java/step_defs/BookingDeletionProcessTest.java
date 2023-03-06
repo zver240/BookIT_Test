@@ -11,6 +11,8 @@ public class BookingDeletionProcessTest extends TestBase {
     public void user_goes_into_my_schedule() {
         WaitUtility.explicitWaitForVisibility(bookingDeletionPage.scheduleLink);
         KeyboardAndMouseActionsUtility.hoverOver(bookingDeletionPage.scheduleLink);
+
+        WaitUtility.explicitWaitForPresenceOfElement(ByClassUtility.useByXpath(ConfigurationReaderUtility.getBookingDeletionValueProperty("BookDeletion_MyLink_ByXpath")));
         WaitUtility.explicitWaitForVisibility(bookingDeletionPage.myLink);
         UserActionsAndNavigationUtilities.click(bookingDeletionPage.myLink);
     }

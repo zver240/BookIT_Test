@@ -1,4 +1,4 @@
-package step_defs.API.API_Interface;
+package step_defs.API;
 
 import io.cucumber.java.en.Then;
 import pojo.MemberPOJOTest;

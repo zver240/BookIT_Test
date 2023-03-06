@@ -3,11 +3,11 @@ package step_defs;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import step_defs.TestBase;
-import utilities.ByClassUtility;
-import utilities.ConfigurationReaderUtility;
-import utilities.UserActionsAndNavigationUtilities;
-import utilities.WaitUtility;
+import utilities.*;
+
+import java.util.List;
 
 public class ScheduleTimeTest extends TestBase {
     @When("user click on hunt")
@@ -22,8 +22,18 @@ public class ScheduleTimeTest extends TestBase {
         WaitUtility.explicitWaitForPresenceOfElement(ByClassUtility.useByXpath(ConfigurationReaderUtility.getHuntPageProperty("HuntPage_CalendarButton_ByXpath")));
         UserActionsAndNavigationUtilities.click(huntPage.calendarButton);
 
-        WaitUtility.explicitWaitForElementToBeClickable(huntPage.timeDropdownSelection25);
-        UserActionsAndNavigationUtilities.click(huntPage.timeDropdownSelection25);
+        WaitUtility.explicitWaitForPresenceOfElement(ByClassUtility.useByXpath(ConfigurationReaderUtility.getHuntPageProperty("HundPage_datesTableAll_ByXpath")));
+        WaitUtility.explicitWaitForVisibility(huntPage.datesTable);
+        WaitUtility.explicitWaitForElementToBeClickable(huntPage.datesTable);
+
+        list = UserActionsAndNavigationUtilities.getListOFWebElements(ByClassUtility.useByXpath(ConfigurationReaderUtility.getHuntPageProperty("HundPage_datesTable_ByXpath")));
+        for(WebElement each:list){
+            if(each.isDisplayed()&&each.isEnabled()){
+                WaitUtility.explicitWaitForVisibility(each);
+                WaitUtility.explicitWaitForElementToBeClickable(each);
+                UserActionsAndNavigationUtilities.click(each);
+            }
+        }
 
         WaitUtility.explicitWaitForVisibility(huntPage.fromSelectionTime);
         UserActionsAndNavigationUtilities.click(huntPage.fromSelectionTime);

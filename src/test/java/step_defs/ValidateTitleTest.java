@@ -1,9 +1,6 @@
 package step_defs;
 
 import io.cucumber.java.en.Given;
-import io.opentelemetry.api.logs.LoggerBuilder;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import utilities.EnvironmentUtility;
 import utilities.ScreenshotUtility;
 import utilities.UserActionsAndNavigationUtilities;

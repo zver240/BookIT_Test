@@ -2,7 +2,6 @@ package step_defs.API;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
 import step_defs.TestBase;
 import utilities.AccessTokenUtility;

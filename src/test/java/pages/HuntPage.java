@@ -11,8 +11,11 @@ public class HuntPage extends BasePage{
     @FindBy(xpath = "//input[contains(@id,'mat-input')]")
     public WebElement dateInput;
 
+    @FindBy (xpath = "//tbody[@class='mat-calendar-body']")
+    public WebElement datesTable;
+
     @FindBy(xpath = "//div[contains(text(),'25')]")
-    public WebElement timeDropdownSelection25;
+    public WebElement HundPage_datesTable_ByXpath;
 
     @FindBy(xpath = "//span[contains(text(),'8:30am')]/parent::mat-option/span")
     public WebElement fromTimeInput;
