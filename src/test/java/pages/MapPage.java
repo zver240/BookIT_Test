@@ -14,4 +14,7 @@ public class MapPage extends BasePage{
     @FindBy(xpath = "//a[contains(text(),'hunt')]")
     public WebElement huntLink;
 
+    @FindBy(xpath = "//*[@class='map']")
+    public WebElement map;
+
 }

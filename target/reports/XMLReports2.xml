@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="8.767" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Bookit Title Verification" name="user checks my schedule" time="7.784">
+<system-out><![CDATA[
+Given user opens Bookit application.........................................passed
+When user logs in as a teacher in qa1.......................................passed
+When user is on Bookit application home page................................passed
+When user clicks on schedule, my............................................passed
+Then user is My on schedule page............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="login in qa2" name="login as a different teacher from qa2" time="5.538">
+<system-out><![CDATA[
+Given user opens Bookit application.........................................passed
+When user logs in as a teacher in qa1.......................................passed
+When user is on Bookit application home page................................passed
+Then user prints each roomName from map.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Bookit Title Verification" name="user logs in and the title is verified" time="8.501">
+<system-out><![CDATA[
+Given user opens Bookit application.........................................passed
+When user logs in as a teacher in qa1.......................................passed
+When user is on Bookit application home page................................passed
+Then title is "bookit"......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

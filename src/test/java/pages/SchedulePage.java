@@ -15,5 +15,8 @@ public class SchedulePage extends BasePage{
     @FindBy(xpath = "//span[contains(text(),'conference in half dome has been canceled')]")
     public WebElement cancellationMessage;
 
+    @FindBy(xpath = "//table")
+    public WebElement table;
+
 
 }
